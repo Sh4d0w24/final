@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+</head>
+<body>
+    <h1>Edit Employee</h1>
+    <form action="/employees/edit/{{ employee.idemployees }}" method="post">
+        <label>First Name: <input type="text" name="first_name" value="{{ employee.first_name }}" required></label><br>
+        <label>Middle Name: <input type="text" name="middle_name" value="{{ employee.middle_name }}"></label><br>
+        <label>Last Name: <input type="text" name="last_name" value="{{ employee.last_name }}" required></label><br>
+        <label>Name Extension: <input type="text" name="name_extension" value="{{ employee.name_extension }}"></label><br>
+        <label>Birthdate: <input type="date" name="birthdate" value="{{ employee.birthdate }}" required></label><br>
+        <label>Sex: <input type="text" name="sex" value="{{ employee.sex }}" required></label><br>
+        <label>Contact No: <input type="text" name="contactno" value="{{ employee.contactno }}" required></label><br>
+        <label>Email: <input type="email" name="email" value="{{ employee.email }}" required></label><br>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/customers">Back to Customers</a>
+</body>
+</html>

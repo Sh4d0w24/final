@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+</head>
+<body>
+    <h1>Customers</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Company</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Email Address</th>
+            <th>Job Title</th>
+            <th>Business Phone</th>
+            <th>Home Phone</th>
+            <th>Mobile Phone</th>
+        </tr>
+        {% for customers in customers %}
+        <tr>
+            <td>{{ customers.id }}</td>
+            <td>{{ customers.company }}</td>
+            <td>{{ customers.last_name }}</td>
+            <td>{{ customers.first_name }}</td>
+            <td>{{ customers.email_address }}</td>
+            <td>{{ customers.job_title }}</td>
+            <td>{{ customers.business_phone }}</td>
+            <td>{{ customers.home_phone }}</td>
+            <td>{{ customers.mobile_phone }}</td>
+            <td>
+                <a href="/customers/edit/{{ customers.id }}">Edit</a>
+                <form action="/customers/delete/{{ customers.id }}" method="post" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/customers/new">Add New Customers</a>
+</body>
+</html>

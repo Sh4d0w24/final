@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Customers</title>
+</head>
+<body>
+    <h1>New Customers</h1>
+    <form action="/customers/new" method="post">
+        <label>Company: <input type="text" name="company" required></label><br>
+        <label>Last Name: <input type="text" name="last_name"></label><br>
+        <label>First Name: <input type="text" name="first_name" required></label><br>
+        <label>Email Address: <input type="text" name="email_address"></label><br>
+        <label>Job Title: <input type="date" name="job_title" required></label><br>
+        <label>Business Phone: <input type="text" name="business_phone" required></label><br>
+        <label>Home Phone: <input type="text" name="home_phone" required></label><br>
+        <label>Mobile Phone: <input type="text" name="mobile_phone" required></label><br>
+        <button type="submit">Create</button>
+    </form>
+    <a href="/customers">Back to Customers</a>
+</body>
+</html>
